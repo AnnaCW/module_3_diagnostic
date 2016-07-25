@@ -23,7 +23,7 @@ describe NrelService do
     stations = NrelService.new.get_stations("zip", "80203")
 
     expect(stations.count).to eq(10)
-    expect(stations.first.name).to eq ("")
+    expect(stations.first.name).to eq("")
 
     end
   end
