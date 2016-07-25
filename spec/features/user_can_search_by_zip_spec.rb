@@ -20,10 +20,10 @@ describe NrelService do
   context "#stations" do
     VCR.use_cassette("stations") do
 
-    stations = NrelService.new.get_stations("zip", "80203")
+    result = NrelService.new.get_stations("80203")
 
-    expect(stations.count).to eq(10)
-    expect(stations.first.name).to eq("")
+    expect(result["total_results"]).to eq(1)
+    expect(result["fuel_stations"].first["station_name"]).to eq("CADACHARGEPOINT")
 
     end
   end

@@ -4,8 +4,8 @@ class Station < ActiveRecord::Base
     @@service = NrelService.new
   end
 
-  def self.find_all
-    service.get_stations(param_name, param)
+  def self.find_all(param)
+    service.get_stations(param)
   end
 
 end

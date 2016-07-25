@@ -5,8 +5,8 @@ class NrelService
     @conn.headers['X-Api-Key'] = ENV['NREL_KEY']
   end
 
-  def get_stations(param_name, param)
-    conn.get("?#{param_name=param}")
+  def get_stations(param)
+    conn.get("?#{zip=param}")
   end
 
   private
