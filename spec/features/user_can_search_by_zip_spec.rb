@@ -21,7 +21,7 @@ describe NrelService do
     VCR.use_cassette("stations") do
 
     stations = NrelService.new.get_stations("zip", "80203")
-byebug
+
     expect(stations.count).to eq(10)
     expect(stations.first.name).to eq ("")
 
