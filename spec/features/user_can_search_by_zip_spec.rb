@@ -4,10 +4,12 @@ require 'rails_helper'
 
 RSpec.feature "user can search by zip" do
   scenario "user sees list of 10 closest stations" do
-    visit "/"
+    # visit "/"
 
-    fill_in "search", with: "80203"
-    click_on "Locate"
+    # fill_in "search", with: "80203"
+    # click_on "Locate"
+
+    visit "/search?zip=80203"
 
     expect(current_path).to eq "/search?zip=80203"
 
