@@ -5,7 +5,7 @@ class Station < ActiveRecord::Base
   end
 
   def self.all
-    service.get_stations(param)
+    service.get_stations(param_name, param)
   end
 
 end
